@@ -5,7 +5,7 @@ Tags: cache, minify, optimize, performance, pagespeed, minify css, minify js, re
 Requires at least: 5.2
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: trunk
+Stable tag: 2.2.6
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -253,6 +253,12 @@ Of course! To do this, email us your wishes with address, which you will find in
 5. Assets manager
 
 == Changelog ==
+= 2.2.6 (29.09.2024) =
+* Wordpress.org cache clear. For some users, the plugin was not updated to the latest version.
+
+= 2.2.5 (07.10.2024) =
+* Fixed: Security issues fixed
+
 = 2.2.4 (24.07.2024) =
 * Fixed: Security issues fixed
 

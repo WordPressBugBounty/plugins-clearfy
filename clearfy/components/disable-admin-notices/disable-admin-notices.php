@@ -8,7 +8,7 @@
  * Text Domain: disable-admin-notices
  * Domain Path: /languages/
  * Author URI: https://webcraftic.com
- * Framework Version: FACTORY_478_VERSION
+ * Framework Version: FACTORY_479_VERSION
  */
 
 /**
@@ -93,17 +93,17 @@ $wdan_plugin_info = array(
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => array(
-		array( 'libs/factory/bootstrap', 'factory_bootstrap_480', 'admin' ),
-		array( 'libs/factory/forms', 'factory_forms_478', 'admin' ),
-		array( 'libs/factory/pages', 'factory_pages_478', 'admin' ),
-		array( 'libs/factory/templates', 'factory_templates_131', 'all' ),
-		array( 'libs/factory/freemius', 'factory_freemius_168', 'all' ),
-		array( 'libs/factory/adverts', 'factory_adverts_156', 'admin' ),
-		//array('libs/factory/logger', 'factory_logger_145', 'all')
+		array( 'libs/factory/bootstrap', 'factory_bootstrap_481', 'admin' ),
+		array( 'libs/factory/forms', 'factory_forms_479', 'admin' ),
+		array( 'libs/factory/pages', 'factory_pages_479', 'admin' ),
+		array( 'libs/factory/templates', 'factory_templates_132', 'all' ),
+		array( 'libs/factory/freemius', 'factory_freemius_169', 'all' ),
+		array( 'libs/factory/adverts', 'factory_adverts_158', 'admin' ),
+		//array('libs/factory/logger', 'factory_logger_147', 'all')
 	)
 );
 
-$wdan_compatibility = new Wbcr_Factory478_Requirements( __FILE__, array_merge( $wdan_plugin_info, array(
+$wdan_compatibility = new Wbcr_Factory479_Requirements( __FILE__, array_merge( $wdan_plugin_info, array(
 	'plugin_already_activate'          => defined( 'WDN_PLUGIN_ACTIVE' ),
 	'required_php_version'             => '7.0',
 	'required_wp_version'              => '4.8.0',

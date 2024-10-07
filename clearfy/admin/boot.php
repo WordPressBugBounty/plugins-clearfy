@@ -21,7 +21,7 @@ if( !defined('ABSPATH') ) {
  * Уведомление будет показано на всех страницах Clearfy и его компонентах.
  *
  * @param WCL_Plugin $plugin
- * @param Wbcr_FactoryPages478_ImpressiveThemplate $obj
+ * @param Wbcr_FactoryPages479_ImpressiveThemplate $obj
  */
 
 add_action('wbcr/factory/pages/impressive/print_all_notices', function ($plugin, $obj) {
@@ -50,7 +50,7 @@ add_action('admin_init', function () {
 			if( WCL_Helper::is_need_show_setup_page() ) {
 				try {
 					$redirect_url = '';
-					if( class_exists('Wbcr_FactoryPages478') ) {
+					if( class_exists('Wbcr_FactoryPages479') ) {
 						$redirect_url = WCL_Plugin::app()->getPluginPageUrl('setup', ['wclearfy_setup_page_viewed' => 1]);
 					}
 					if( $redirect_url ) {
@@ -84,8 +84,8 @@ add_action('wbcr/factory/pages/impressive/header', function ($plugin_name) {
 
 /**
  * @param                                          $form
- * @param Wbcr_Factory478_Plugin $plugin
- * @param Wbcr_FactoryPages478_ImpressiveThemplate $obj
+ * @param Wbcr_Factory479_Plugin $plugin
+ * @param Wbcr_FactoryPages479_ImpressiveThemplate $obj
  */
 function wbcr_clearfy_multisite_before_save($form, $plugin, $obj)
 {
@@ -131,7 +131,7 @@ add_action('wbcr/factory/pages/impressive/plugin_title', 'wbcr_clearfy_branding'
 	wp_enqueue_style('wbcr-clearfy-install-components', WCL_PLUGIN_URL . '/admin/assets/css/install-addons.css', [], WCL_Plugin::app()->getPluginVersion());
 	wp_enqueue_script('wbcr-clearfy-install-components', WCL_PLUGIN_URL . '/admin/assets/js/install-addons.js', [
 		'jquery',
-		'wbcr-factory-templates-131-global'
+		'wbcr-factory-templates-132-global'
 	], WCL_Plugin::app()->getPluginVersion());
 });*/
 
@@ -151,7 +151,7 @@ add_filter('flush_rewrite_rules_hard', 'wbcr_clearfy_flush_rewrite_rules');
  * Обновить постоынные ссылки, после выполнения быстрых настроек
  *
  * @param WHM_Plugin $plugin
- * @param Wbcr_FactoryPages478_ImpressiveThemplate $obj
+ * @param Wbcr_FactoryPages479_ImpressiveThemplate $obj
  */
 function wbcr_clearfy_after_form_save($plugin, $obj)
 {
@@ -174,7 +174,7 @@ add_action('wbcr/factory/pages/impressive/after_form_save', 'wbcr_clearfy_after_
  *
  * @param array $widgets
  * @param string $position
- * @param Wbcr_Factory478_Plugin $plugin
+ * @param Wbcr_Factory479_Plugin $plugin
  */
 
 add_filter('wbcr/factory/pages/impressive/widgets', function ($widgets, $position, $plugin) {

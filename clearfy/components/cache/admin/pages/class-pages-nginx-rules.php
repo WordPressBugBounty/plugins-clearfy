@@ -10,14 +10,14 @@ if( !defined('ABSPATH') ) {
 	exit;
 }
 
-class WCL_CacheProNginxRulesPage extends WBCR\Factory_Templates_131\Pages\PageBase {
+class WCL_CacheProNginxRulesPage extends WBCR\Factory_Templates_132\Pages\PageBase {
 
 	/**
 	 * The id of the page in the admin menu.
 	 *
 	 * Mainly used to navigate between pages.
 	 *
-	 * @see   FactoryPages478_AdminPage
+	 * @see   FactoryPages479_AdminPage
 	 *
 	 * @since 1.0.0
 	 * @var string

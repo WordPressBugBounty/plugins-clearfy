@@ -72,12 +72,12 @@ class WCL_ComponentsLicensePage extends WCL_Page {
 	/**
 	 * WCL_LicensePage constructor.
 	 *
-	 * @param \Wbcr_Factory478_Plugin $plugin
+	 * @param \Wbcr_Factory479_Plugin $plugin
 	 *
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 *
 	 */
-	public function __construct(Wbcr_Factory478_Plugin $plugin)
+	public function __construct(Wbcr_Factory479_Plugin $plugin)
 	{
 		$this->menu_title = __('License', 'robin-image-optimizer');
 		$this->page_menu_short_description = __('Product activation', 'robin-image-optimizer');
@@ -91,7 +91,7 @@ class WCL_ComponentsLicensePage extends WCL_Page {
 	 *
 	 * @return void
 	 * @since 1.0.0
-	 * @see   FactoryPages478_AdminPage
+	 * @see   FactoryPages479_AdminPage
 	 *
 	 */
 	/*public function assets($scripts, $styles)
@@ -101,8 +101,8 @@ class WCL_ComponentsLicensePage extends WCL_Page {
 		$this->styles->add(WCL_PLUGIN_URL . '/admin/assets/css/components.css');
 
 		/**
-		 * @param Wbcr_Factory478_StyleList $styles
-		 * @param Wbcr_Factory478_ScriptList $scripts
+		 * @param Wbcr_Factory479_StyleList $styles
+		 * @param Wbcr_Factory479_ScriptList $scripts
 		 *
 		 * @since 1.4.0
 		 *
