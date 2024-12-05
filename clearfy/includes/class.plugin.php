@@ -108,11 +108,10 @@ class WCL_Plugin extends Wbcr_Factory480_Plugin {
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 */
 	public function plugins_loaded() {
-		//if( is_admin() ) {
-		//$this->register_pages();
-		//}
 
-		require_once( WCL_PLUGIN_DIR . '/admin/pages/class-page.php' );
+		if ( is_admin() ) {
+			require_once( WCL_PLUGIN_DIR . '/admin/pages/class-page.php' );
+		}
 
 		require_once( WCL_PLUGIN_DIR . '/includes/classes/class.configurate-advanced.php' );
 		new WCL_ConfigAdvanced( $this );
