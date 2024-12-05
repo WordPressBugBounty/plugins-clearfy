@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class WCL_ConfigSeo extends WBCR\Factory_Templates_132\Configurate {
+class WCL_ConfigSeo extends WBCR\Factory_Templates_134\Configurate {
 
 	/**
 	 * @param WCL_Plugin $plugin
