@@ -9,6 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * ajax action for switch option
  */
 function wbcr_upm_change_flag() {
+	check_ajax_referer( 'wbcr_upm_change_flag' );
+
 	if ( ! current_user_can( 'install_plugins' ) ) {
 		wp_die( - 1, 403 );
 	}

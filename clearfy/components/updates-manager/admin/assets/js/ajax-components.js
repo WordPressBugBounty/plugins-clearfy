@@ -22,6 +22,7 @@ jQuery(function($) {
 			var new_value = $(this).val();
 
 			var data = {};
+			data['_wpnonce'] = wbcr_upm_ajax.nonce;
 			data['action'] = 'wbcr-upm-change-flag';
 			data['theme'] = $(this).data('theme-slug');
 			if( !data['theme'] ) {

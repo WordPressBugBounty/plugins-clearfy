@@ -128,6 +128,12 @@ class WUPM_PluginsPage extends WBCR\Factory_Templates_134\Pages\PageBase {
 		parent::assets( $scripts, $styles );
 		$this->styles->add( WUPM_PLUGIN_URL . '/admin/assets/css/general.css' );
 		$this->scripts->add( WUPM_PLUGIN_URL . '/admin/assets/js/ajax-components.js' );
+		$this->scripts->localize(
+			'wbcr_upm_ajax',
+			array(
+				'nonce' => wp_create_nonce( 'wbcr_upm_change_flag')
+			)
+		);
 
 		// Add Clearfy styles for HMWP pages
 		if ( defined( 'WCL_PLUGIN_ACTIVE' ) ) {
