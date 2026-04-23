@@ -4,7 +4,7 @@ Tags: cache, minify, optimize, performance, pagespeed, minify css, minify js, re
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -256,6 +256,13 @@ Of course! To do this, email us your wishes with address, which you will find in
 5. Assets manager
 
 == Changelog ==
+
+#####   Version 2.4.2 (2026-04-23)
+
+- Enhanced security
+
+
+
 
 #####   Version 2.4.1 (2025-12-16)
 

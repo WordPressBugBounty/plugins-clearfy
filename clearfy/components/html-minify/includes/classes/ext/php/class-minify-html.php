@@ -95,7 +95,17 @@ class WHTM_Minify_HTML {
             $this->_isXhtml = (false !== strpos($this->_html, '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML'));
         }
 
-        $this->_replacementHash = 'MINIFYHTML' . md5($_SERVER['REQUEST_TIME']);
+        try {
+            $rand = bin2hex( random_bytes( 16 ) );
+        } catch ( Exception $e ) {
+            if ( function_exists( 'wp_generate_password' ) ) {
+                $rand = md5( wp_generate_password( 32, true, true ) );
+            } else {
+                $strong = false;
+                $rand   = bin2hex( openssl_random_pseudo_bytes( 16, $strong ) );
+            }
+        }
+        $this->_replacementHash = 'MINIFYHTML' . $rand;
         $this->_placeholders = array();
 
         // replace SCRIPTs (and minify) with placeholders
@@ -131,7 +141,7 @@ class WHTM_Minify_HTML {
 
         // replace data: URIs with placeholders
         $this->_html = preg_replace_callback(
-            '/(=("|\')data:.*\\2)/Ui'
+            '/(=("|\')data:[a-z][a-z0-9!#\$&\-^_.]*\/[a-z0-9!#\$&\-^_+.]+(?:;[a-z0-9\-]+=?[a-z0-9\-]*)*;[a-z0-9\-]+=?,[a-zA-Z0-9+\/=]*\2)/i'
             ,array($this, '_removeDataURICB')
             ,$this->_html);
 
@@ -156,11 +166,17 @@ class WHTM_Minify_HTML {
         //$this->_html = preg_replace('/(<[a-z\\-]+)\\s+([^>]+>)/i', "$1\n$2", $this->_html);
 
         // fill placeholders
-        $this->_html = str_replace(
-            array_keys($this->_placeholders)
-            ,array_values($this->_placeholders)
-            ,$this->_html
+        foreach ( $this->_placeholders as $token => $original ) {
+            $this->_html = str_replace( $token, $original, $this->_html );
+        }
+
+        $escaped_hash = preg_quote( $this->_replacementHash, '/' );
+        $this->_html  = preg_replace(
+            '/%' . $escaped_hash . '[0-9]+%/',
+            '',
+            $this->_html
         );
+
         return $this->_html;
     }
 

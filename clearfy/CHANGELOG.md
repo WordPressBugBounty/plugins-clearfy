@@ -1,3 +1,7 @@
+#####   Version 2.4.2 (2026-04-23)
+
+- Enhanced security
+
 #####   Version 2.4.1 (2025-12-16)
 
 - Enhanced security
