@@ -111,5 +111,25 @@ class Wbcr_Factory480_Request {
 	public function post( $param, $default = false, $sanitize = false ) {
 		return $this->getBody( $param, $sanitize, $default, 'post' );
 	}
+
+	/**
+	 * Get all request parameters.
+	 *
+	 * @param bool|string $sanitize see method getBody
+	 * @return mixed|null
+	 */
+	public function getAll( $sanitize = false ) {
+		$params = $_REQUEST;
+ 		if ( empty( $sanitize ) ) {
+ 			return $params;
+ 		}
+
+ 		$sanitize_function_name = 'sanitize_text_field';
+ 		if ( is_string( $sanitize ) && $sanitize !== $sanitize_function_name ) {
+ 			$sanitize_function_name = $sanitize;
+ 		}
+
+ 		return $this->recursiveArrayMap( $sanitize_function_name, wp_unslash( $params ) );
+	}
 }
 	

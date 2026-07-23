@@ -83,14 +83,6 @@ $wdan_plugin_info = [
 	'subscribe_widget'     => true,
 	'subscribe_settings'   => [ 'group_id' => '105407140' ],
 
-	// PLUGIN ADVERTS
-	'render_adverts'       => true,
-	'adverts_settings'     => [
-		'dashboard_widget' => false, // show dashboard widget (default: false)
-		'right_sidebar'    => true, // show adverts sidebar (default: false)
-		'notice'           => false, // show notice message (default: false)
-	],
-
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
 		[ 'libs/factory/bootstrap', 'factory_bootstrap_482', 'admin' ],
@@ -98,7 +90,6 @@ $wdan_plugin_info = [
 		[ 'libs/factory/pages', 'factory_pages_480', 'admin' ],
 		[ 'libs/factory/templates', 'factory_templates_134', 'all' ],
 		[ 'libs/factory/freemius', 'factory_freemius_170', 'all' ],
-		[ 'libs/factory/adverts', 'factory_adverts_159', 'admin' ],
 		//array('libs/factory/logger', 'factory_logger_149', 'all')
 	]
 ];

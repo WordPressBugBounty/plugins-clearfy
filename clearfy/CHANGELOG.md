@@ -1,3 +1,9 @@
+#####   Version 2.4.3 (2026-07-23)
+
+- Enhanced security 
+
+Thanks to Revanth Hari Narayana Matte & Omar Elshopky​​ for responsibly reporting the issues.
+
 #####   Version 2.4.2 (2026-04-23)
 
 - Enhanced security

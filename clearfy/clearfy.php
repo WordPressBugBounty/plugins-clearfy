@@ -4,7 +4,7 @@
  * Plugin URI: https://clearfy.pro
  * Description: Disables unused Wordpress features, improves performance and increases SEO rankings, using Clearfy, which makes WordPress very easy.
  * Author: Creative Motion <info@cm-wp.com>
- * Version: 2.4.2
+ * Version: 2.4.3
  * Text Domain: clearfy
  * Domain Path: /languages/
  * Author URI: https://cm-wp.com
@@ -80,13 +80,6 @@ $plugin_info = [
 	'subscribe_widget'       => true,
 	'subscribe_settings'     => [ 'group_id' => '105407119' ],
 
-	// PLUGIN ADVERTS
-	'render_adverts'         => true,
-	'adverts_settings'       => [
-		'dashboard_widget' => true, // show dashboard widget (default: false)
-		'right_sidebar'    => true, // show adverts sidebar (default: false)
-		'notice'           => true, // show notice message (default: false)
-	],
 	// FRAMEWORK MODULES
 	'load_factory_modules'   => [
 		[ 'libs/factory/bootstrap', 'factory_bootstrap_482', 'admin' ],
@@ -94,7 +87,6 @@ $plugin_info = [
 		[ 'libs/factory/pages', 'factory_pages_480', 'admin' ],
 		[ 'libs/factory/templates', 'factory_templates_134', 'all' ],
 		[ 'libs/factory/freemius', 'factory_freemius_170', 'all' ],
-		[ 'libs/factory/adverts', 'factory_adverts_159', 'admin' ],
 		[ 'libs/factory/logger', 'factory_logger_149', 'all' ],
 
 	],

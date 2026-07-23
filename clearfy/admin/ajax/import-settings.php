@@ -58,7 +58,7 @@
 			$raw_option_value = $option_value;
 
 			if( is_serialized($option_value) ) {
-				$option_value = unserialize($option_value);
+				$option_value = unserialize($option_value, array( 'allowed_classes' => false ) );
 			}
 
 			if( is_array($option_value) || is_object($option_value) ) {

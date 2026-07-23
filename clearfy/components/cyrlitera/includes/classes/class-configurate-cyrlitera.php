@@ -253,12 +253,15 @@ class WCTR_ConfigurateCyrlitera extends WBCR\Factory_Templates_134\Configurate {
 
 		if ( $is404 ) {
 			if ( $this->getPopulateOption( 'redirect_from_old_urls' ) ) {
-				$current_url = urldecode( $_SERVER['REQUEST_URI'] );
+				$current_url = $_SERVER['REQUEST_URI'];
 				$new_url     = WCTR_Helper::transliterate( $current_url, true );
 				$new_url     = strtolower( $new_url );
 
-				if ( $current_url != $new_url ) {
-					wp_redirect( $new_url, 301 );
+				// WCTR_Helper::transliterate() is decoded the url,
+				// So need to decode the current url for comparison.
+				if ( urldecode( $current_url ) != $new_url ) {
+					wp_safe_redirect( $new_url, 301 );
+					exit;
 				}
 			}
 		}
